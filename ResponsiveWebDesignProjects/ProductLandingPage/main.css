@@ -1,71 +1,104 @@
+/** global element styling **/
+
 @import "https://fonts.googleapis.com/css?family=Lato:400,700";
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.wrapper {
+  position: relative;
 }
-
 body {
-    background-color:black;
-    font-family: 'Lato', sans-serif;
-    color: red;
-  }
-  h3 {
-    color: white;
-  }
-  h2 {
-    color: red;
-  }
-  p {
-    color: white;
-  }
+  color: white;
+}
+ header {
+  overflow: hidden;
+  background-color: #333;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  justify-content: space-around;
+  align-items: center;
+  top: 0;
+  width: 100%;
+ }
 
+ @media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
+ nav a {
+  float: right;
+  display: flex;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
 
-#page-wrapper {
-    position: relative;
-    text-align: center;
+nav a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+}
+#title h1{
+  color: #e00e31
 }
 
 
+.bg-black {
+  background-color: black;
+}
+.main-img {
+  width: 100%;  
+}
 
-header {
-    position: fixed;
-    height: 75px;
-    width: 100%;
-    padding: 0px 20px;
-    justify-content: space-around;
-    
-    display: flex;
-    background-color: black;
+.features-conteiner {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+.features {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.features h2 {
+  color: #e00e31;
+  text-transform: uppercase;
+}
+
+.specification {
+  font: normal normal normal 15px/1.4em spinnaker,sans-serif;
+  padding: 3rem;
+  background-color: white;
+  color: black;
+  text-align: center;
+  line-height: 0em;
 }
 
 
-
-
-#header-img {
-    height: 100%;
-}
-  
-nav {
-    display: flex;
-    flex-direction: column;
+.specification h2 {
+  font-family: proxima-n-w01-reg,sans-serif;
+  line-height: normal;
+  text-transform: uppercase;
+  font-size: 40px
 }
 
-nav > ul {
-    width: 35vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    color: white;
-  }
-
-  #title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 200px;
-    margin-top: 0px;
-  }
+.video{
+  padding: 2rem;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
