@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <nav id="navbar">
+        <header>QuickSort</header>
+        <ul>
+            <li><a class="nav-link" href="#Introducao">Introducao</a></li>
+            <li><a class="nav-link" href="#Algoritmo">Algoritmo</a></li>
+            <li><a class="nav-link" href="#Complexidade">Complexidade</a></li>
+            <li><a class="nav-link" href="#Implementacao">Implementacao</a></li>
+            <li><a class="nav-link" href="#Comparacao">Comparacao</a></li>
+        </ul>
+        
+
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introducao">
+            <header>Introducao</header>
+            <article>
+                <p>
+                    O algoritmo quicksort é um método de ordenação muito rápido e eficiente, inventado por C.A.R. Hoare em 1960[1], quando visitou a Universidade de Moscovo como estudante. Naquela época, Hoare trabalhou em um projeto de tradução de máquina para o National Physical Laboratory. Ele criou o quicksort ao tentar traduzir um dicionário de inglês para russo, ordenando as palavras, tendo como objetivo reduzir o problema original em subproblemas que possam ser resolvidos mais fácil e rápido. Foi publicado em 1962 após uma série de refinamentos.[2]
+                </p>
+                <p>O quicksort é um algoritmo de ordenação por comparação não-estável.</p>
+
+            </article>
+
+        </section>
+        <section class="main-section" id="Algoritmo">
+            <header>Algoritmo</header>
+            <article>
+                <p>O quicksort adota a estratégia de divisão e conquista. A estratégia consiste em rearranjar as chaves de modo que as chaves "menores" precedam as chaves "maiores". Em seguida o quicksort ordena as duas sublistas de chaves menores e maiores recursivamente até que a lista completa se encontre ordenada. [3]Os passos são:</p>
+                <ol>
+                    <li>Escolha um elemento da lista, denominado pivô;</li>
+                    <li>Particiona: rearranje a lista de forma que todos os elementos anteriores ao pivô sejam menores que ele, e todos os elementos posteriores ao pivô sejam maiores que ele. Ao fim do processo o pivô estará em sua posição final e haverá duas sub listas não ordenadas. Essa operação é denominada partição;</li>
+                    <li>Recursivamente ordene a sub lista dos elementos menores e a sub lista dos elementos maiores;</li>
+                    <li>Recursivamente ordene a sub lista dos elementos menores e a sub lista dos elementos maiores;</li>
+                    <li>Recursivamente ordene a sub lista dos elementos menores e a sub lista dos elementos maiores;</li>
+                </ol>
+                <p>O caso base da recursão são as listas de tamanho zero ou um, que estão sempre ordenadas. O processo é finito, pois a cada iteração pelo menos um elemento é posto em sua posição final e não será mais manipulado na iteração seguinte.</p>
+                <p>A escolha do pivô e os passos do Particiona podem ser feitos de diferentes formas e a escolha de uma implementação específica afeta fortemente a performance do algoritmo.               </p>
+                <h3>Método de partição de Lomuto</h3>
+                <p>Método atribuído a Nico Lomuto e popularizado por Bentley em seu livro Programming Pearls[4] e por Cormen et al. no livro Introduction to Algorithms. Este método escolhe um pivô tipicamente no início ou no final do array. O Particiona recebe como parâmetro dois índices do array, lo e hi, que será a parte do array a ser particionada, então escolhe-se um índice i e percorre-se o array usando outro índice j realizando trocas, quando necessário, a fim de que todos os elementos menores ou iguais ao pivô fiquem antes do índice i e os elementos i + 1 até hi, ou j - 1, sejam maiores que o pivô . Esta é a maneira mais simples e fácil de entender, geralmente utilizada como uma introdução ao quicksort, entretanto é menos eficiente que o método Hoare. Este Método decai para O(n2) quando o array já está ordenado ou quando só possui elementos iguais. Existem várias formas para melhorar a eficiência do algoritmo através da escolha do pivô, lidar com elementos iguais, usar outros algoritmos para pequenos arrays como o Insertion sort e assim por diante.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Complexidade">
+            <header>Complexidade</header>
+            <article>
+                <h3>Comportamento no pior caso</h3>
+                <p>O pior caso de particionamento ocorre quando o elemento pivô divide a lista de forma desbalanceada, ou seja, divide a lista em duas sub listas: uma com tamanho 0 e outra com tamanho n - 1 (no qual n se refere ao tamanho da lista original). Isso pode ocorrer quando o elemento pivô é o maior ou menor elemento da lista, ou seja, quando a lista já está ordenada, ou inversamente ordenada.</p>
+                <h3>Comportamento no melhor caso</h3>
+                <p>Comportamento no melhor caso</p>
+            </article>
+        </section>
+        <section class="main-section" id="Implementacao">
+            <header>Implementacao</header>
+            <article>
+                <p>Em pseudocódigo, o quicksort ordena elementos do índice {\displaystyle i_{0}}{\displaystyle i_{0}} até {\displaystyle H_{i}}{\displaystyle H_{i}} de um array A pode ser escrito da seguinte forma:                </p>
+
+            </article>
+        </section>
+        <section class="main-section" id="Comparacao">
+            <header>Comparacao</header>
+            <article>
+                <p>O quicksort é uma versão optimizada de uma <code>árvore binária ordenada</code> . Em vez de introduzir itens sequencialmente numa árvore explicita, o quicksort organiza-os correntemente na árvore onde está implícito, fazendo-o com chamadas recursivas à mesma. O algoritmo faz exactamente as mesmas comparações, mas com uma ordem diferente.
+
+                </p>
+                <p>O algoritmo que mais se familiariza com o quicksort é o <code>Heapsort</code>. Para o pior caso neste algoritmo temos {\displaystyle {\mathcal {O}}(n\log 2n).}
+                    <code>O(n\log 2n)</code>. Mas, o <code>Heapsort</code>  em média trata-se de um algoritmo mais lento que o quicksort, embora essa afirmação já tenha sido muito debatida. No quicksort permanece o caso do pior caso, à exceção quando se trata de usar a variante <code>Intro sort</code> , que muda para <code>Heapsort</code> quando um pior caso é detectado. Caso se saiba à partida que será necessário o uso do heapsort é aconselhável usá-lo directamente, do que usar o introsort e depois chamar o <code>heapsort</code>, torna mais rápido o algoritmo</p>
+                <p>O quicksort também compete com o Mergesort, outro algoritmo de ordenação recursiva, tendo este o benefício de ter como pior caso {\displaystyle {\mathcal {O}}(n\log n).}{\displaystyle {\mathcal {O}}(n\log n).} Mergesort, ao contrário do quicksort e do Heapsort, é estável e pode facilmente ser adptado para operar em listas encadeadas e em listas bastante grandes alojadas num tipo de acesso lento a média como um Network-Attached Storage ou num disco. Embora o quicksort possa ser operado em listas encadeadas, por vezes escolhendo um mau pivô sem acesso aleatório. A maior desvantagem do Mergesort é que quando opera em arrays, requer {\displaystyle {\mathcal {O}}(n)}{\displaystyle {\mathcal {O}}(n)} de espaço para o melhor caso, considerando que o quicksort com um particionamento espacial e com recursão utiliza apenas {\displaystyle {\mathcal {O}}(\log n)}{\displaystyle {\mathcal {O}}(\log n)} de espaço.</p>
+                <p>
+                    Bucket sort com dois buckets é muito parecido ao quicksort (quase idêntico), o pivô neste caso é garantidamente o valor do meio do vector.
+
+
+                </p>
+            </article>
+        </section>
+    </main>
+
+
+</body>
+</html>
